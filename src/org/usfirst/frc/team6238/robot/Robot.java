@@ -21,16 +21,6 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * project.
  */
 
-//link for .getY() and .getX() 
-//http://first.wpi.edu/FRC/roborio/development/docs/java/edu/wpi/first/wpilibj/GenericHID.html#getY--
-/**
- * public final double getY()
-Get the y position of the HID.
-Returns:
-the y position
- *
- */
-
 public class Robot extends IterativeRobot {
 	private static final String kDefaultAuto = "Default";
 	private static final String kCustomAuto = "My Auto";
@@ -42,17 +32,17 @@ public class Robot extends IterativeRobot {
 	DifferentialDrive myRobot;
 	SpeedControllerGroup m_left;
 	SpeedControllerGroup m_right;
-	 
-	//green wheels controlled by right controller 
-	
+
+	//green wheels controlled by right controller
+
 	WPI_TalonSRX m_green;
-	
+
 	//green wheels controlled by left controller
-	
-	WPI_TalonSRX m_green2; 
+
+	WPI_TalonSRX m_green2;
 	Solenoid solenoid;
-	
-	
+
+
 	/**
 	 * This function is run when the robot is first started up and should be
 	 * used for any initialization code.
