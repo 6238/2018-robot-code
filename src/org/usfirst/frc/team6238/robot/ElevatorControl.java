@@ -19,6 +19,12 @@ import edu.wpi.first.wpilibj.Joystick;
 
 public class ElevatorControl implements RobotController
 {
+    public ElevatorControl()
+    {
+        isLeftElevatorButtonpressed=leftStick.getRawButton(4); //Todo: need to find button number
+        isRightElevatorButtonpressed=rightStick.getRawButton(5); //Todo: need to find button number
+    }
+
     private Joystick rightStick, leftStick;
     private boolean isLeftElevatorButtonpressed=leftStick.getRawButton(4); //Todo: need to find button number
     private boolean isRightElevatorButtonpressed=rightStick.getRawButton(5);//Todo: need to find button number

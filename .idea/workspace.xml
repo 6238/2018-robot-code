@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="320b9c1e-8891-4aa2-ad8d-110075131372" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/org/usfirst/frc/team6238/robot/ElevatorControl.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/cscore.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/org/usfirst/frc/team6238/robot/Robot.java" afterPath="$PROJECT_DIR$/src/org/usfirst/frc/team6238/robot/Robot.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/usfirst/frc/team6238/robot/RobotProperties.java" afterPath="$PROJECT_DIR$/src/org/usfirst/frc/team6238/robot/RobotProperties.java" />
+      <change beforePath="$PROJECT_DIR$/src/org/usfirst/frc/team6238/robot/ElevatorControl.java" afterPath="$PROJECT_DIR$/src/org/usfirst/frc/team6238/robot/ElevatorControl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,10 +17,10 @@
       <file leaf-file-name="ElevatorControl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team6238/robot/ElevatorControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="46" column="20" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+            <state relative-caret-position="235">
+              <caret line="32" column="27" lean-forward="true" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
               <folding>
-                <element signature="e#0#1767#0" expanded="true" />
+                <element signature="e#0#2007#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -36,8 +30,8 @@
       <file leaf-file-name="RobotProperties.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team6238/robot/RobotProperties.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+            <state relative-caret-position="317">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -56,8 +50,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/org/usfirst/frc/team6238/robot/ElevatorControl.java" />
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team6238/robot/RobotProperties.java" />
+        <option value="$PROJECT_DIR$/src/org/usfirst/frc/team6238/robot/ElevatorControl.java" />
       </list>
     </option>
   </component>
@@ -262,18 +256,18 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team6238/robot/RobotProperties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+        <state relative-caret-position="317">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team6238/robot/ElevatorControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="46" column="20" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+        <state relative-caret-position="235">
+          <caret line="32" column="27" lean-forward="true" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
           <folding>
-            <element signature="e#0#1767#0" expanded="true" />
+            <element signature="e#0#2007#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
