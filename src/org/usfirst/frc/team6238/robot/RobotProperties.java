@@ -32,6 +32,8 @@ public class RobotProperties {
         WPI_TalonSRX m_frontLeft = new WPI_TalonSRX(34);
         WPI_TalonSRX m_rearLeft = new WPI_TalonSRX(33);
         WPI_TalonSRX m_midLeft = new WPI_TalonSRX(34);
+        WPI_TalonSRX m_elevator = new WPI_TalonSRX(35);
+        
         m_green = new WPI_TalonSRX(37);
         m_green2 = new WPI_TalonSRX(38);
         m_left = new SpeedControllerGroup(m_frontLeft, m_rearLeft, m_midLeft);
@@ -119,7 +121,11 @@ public class RobotProperties {
     public Solenoid getDriveTrainSolenoid() {
     	return driveTrainSolenoid;
     }
-
+    
+    public WPI_TalonSRX getM_elevator()
+    {
+    	return m_elevator;
+    }
     public void setDriveTrainSolenoid(Solenoid driveTrainSolenoid) {
         this.solenoid = driveTrainSolenoid;
     }
