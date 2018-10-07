@@ -55,7 +55,7 @@ public class Robot2 extends IterativeRobot {
         controllers = new ArrayList<>();
 
         // setup the controllers.
-        controllers.add(new DriveTrainRobotController());
+        controllers.add(new ElevatorControl());
     }
 
     /**

@@ -15,19 +15,19 @@ public class ElevatorControl implements RobotController {
 
 	private Joystick rightStick, leftStick;
 	private boolean isLeftElevatorButtonpressed;
-	private boolean isRightElevatorButtonpressed;
+	private boolean isRightElevatorButtonPressed;
 
 	public ElevatorControl()
     {
     	isLeftElevatorButtonpressed=leftStick.getRawButton(4); //Todo: need to find button number
-    	isRightElevatorButtonpressed=rightStick.getRawButton(5); //Todo: need to find button number
+    	isRightElevatorButtonPressed=rightStick.getRawButton(5); //Todo: need to find button number
     }
 
 	@Override
 	public boolean performAction(RobotProperties properties) {
 		WPI_TalonSRX m_elevator = properties.getM_elevator();
 		m_elevator.set(0);
-		if (isRightElevatorButtonpressed && isLeftElevatorButtonpressed) {
+		if (isRightElevatorButtonPressed && isLeftElevatorButtonpressed) {
 			m_elevator.set(0);
 		} else if (isLeftElevatorButtonpressed) {
 			m_elevator.set(-10);
