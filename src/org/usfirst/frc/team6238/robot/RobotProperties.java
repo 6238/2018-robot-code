@@ -23,7 +23,7 @@ public class RobotProperties {
     //green wheels controlled by left controller
     private WPI_TalonSRX m_green2;
     private Solenoid solenoid;
-
+    private Solenoid driveTrainSolenoid;
     public RobotProperties() {
         this.timer = new Timer();
         rightStick = new Joystick(0);
@@ -31,6 +31,8 @@ public class RobotProperties {
         solenoid = new Solenoid(1);
         
 		elevatorTalon = new WPI_TalonSRX(35);
+        driveTrainSolenoid = new Solenoid(0);
+        
         WPI_TalonSRX m_frontLeft = new WPI_TalonSRX(34);
         WPI_TalonSRX m_rearLeft = new WPI_TalonSRX(33);
         WPI_TalonSRX m_midLeft = new WPI_TalonSRX(34);
@@ -126,5 +128,13 @@ public class RobotProperties {
     public void setElevatorTalon(WPI_TalonSRX elevatorTalon)
     {
     	this.elevatorTalon = elevatorTalon;
+    }
+    
+    public Solenoid getDriveTrainSolenoid() {
+    	return driveTrainSolenoid;
+    }
+
+    public void setDriveTrainSolenoid(Solenoid driveTrainSolenoid) {
+        this.solenoid = driveTrainSolenoid;
     }
 }
