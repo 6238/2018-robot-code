@@ -17,7 +17,7 @@ public class ElevatorControl implements RobotController {
 	private boolean isLeftElevatorButtonpressed;
 	private boolean isRightElevatorButtonpressed;
 
-	private ElevatorControl()
+	public ElevatorControl()
     {
     	isLeftElevatorButtonpressed=leftStick.getRawButton(); //Todo: need to find button number
     	isRightElevatorButtonpressed=rightStick.getRawButton(); //Todo: need to find button number
