@@ -56,7 +56,7 @@ public class Robot extends IterativeRobot {
 		timer = new Timer();
 		
 		//joystick 0 is the right one
-		//joystick 1 is the right one
+		//joystick 1 is the left one
 		
 		rightStick = new Joystick(0);
 		leftStick = new Joystick(1);

@@ -14,6 +14,7 @@ public class RobotProperties {
     private DifferentialDrive myRobot;
     private SpeedControllerGroup m_left;
     private SpeedControllerGroup m_right;
+    private WPI_TalonSRX m_elevator; //elevator controlled by both right and left(one up, one down)
 
     //green wheels controlled by right controller
     private WPI_TalonSRX m_green;
@@ -28,7 +29,9 @@ public class RobotProperties {
         leftStick = new Joystick(1);
         solenoid = new Solenoid(1);
         driveTrainSolenoid = new Solenoid(0);
-        
+
+        WPI_TalonSRX m_elevator = new WPI_TalonSRX(35);
+
         WPI_TalonSRX m_frontLeft = new WPI_TalonSRX(34);
         WPI_TalonSRX m_rearLeft = new WPI_TalonSRX(33);
         WPI_TalonSRX m_midLeft = new WPI_TalonSRX(34);
@@ -123,4 +126,8 @@ public class RobotProperties {
     public void setDriveTrainSolenoid(Solenoid driveTrainSolenoid) {
         this.solenoid = driveTrainSolenoid;
     }
-}
+
+
+    public WPI_TalonSRX getM_elevator() {return m_elevator;}
+
+
