@@ -12,23 +12,21 @@ import edu.wpi.first.wpilibj.Joystick;
  */
 public class IntakeSystem implements RobotController
 {
-
-    // takes input from joysticks
-    private Joystick rightStick, leftStick;
-
     // checks if the motors are currently on
     private boolean isOn;
 
     // intializes joysticks
     public IntakeSystem()
     {
-	isLeftElevatorButtonpressed = leftStick.getRawButton();// TODO:map buttons
-	isRightElevatorButtonpressed = rightStick.getRawButton();// TODO:map buttons
 	isOn = false;
     }
 
     public boolean performAction(RobotProperties properties)
     {
+	//checks if the buttons are pressed
+	boolean isLeftElevatorButtonpressed = leftStick.getRawButton();// TODO:map buttons
+	boolean isRightElevatorButtonpressed = rightStick.getRawButton();// TODO:map buttons
+
 	// intake wheel controlled by right joystick
 	WPI_TalonSRX m_green = properties.getM_green();
 
