@@ -8,29 +8,21 @@ import edu.wpi.first.wpilibj.Solenoid;
  */
 public class DriveTrainRobotController implements RobotController {
     public DriveTrainRobotController() {
-        isRightDriveTrainButtonpressed = leftStick.getRawButton(1);//TODO:map buttons
-        isLeftDriveTrainButtonpressed = rightStick.getRawButton(1);//TODO:map buttons
+
 
     }
 
-    private Joystick rightStick, leftStick;
-    private boolean isLeftDriveTrainButtonpressed;
-    private boolean isRightDriveTrainButtonpressed;
 
     @Override
     public boolean performAction(RobotProperties properties) {
         // you might want to check for a button that is the Drive Train button.
-        if (isLeftDriveTrainButtonpressed || isLeftDriveTrainButtonpressed) {
+        boolean isLeftDriveTrainButtonPressed = properties.getLeftStick().getRawButton(1);
+        boolean isRightDriveTrainButtonPressed = properties.getRightStick().getRawButton(1);
+        if (isLeftDriveTrainButtonPressed || isRightDriveTrainButtonPressed) {
             properties.getMyRobot().tankDrive(properties.getRightStick().getY(), properties.getLeftStick().getY());
             Solenoid driveTrainSolenoid = properties.getDriveTrainSolenoid();
             driveTrainSolenoid.set(true);
-
-
         }
-        else
-            {
-                return false;
-            }
         return true;
     }
 }
