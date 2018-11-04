@@ -24,8 +24,8 @@ public class IntakeSystem implements RobotController
     public boolean performAction(RobotProperties properties)
     {
 	//checks if the buttons are pressed
-	boolean isLeftElevatorButtonpressed = leftStick.getRawButton();// TODO:map buttons
-	boolean isRightElevatorButtonpressed = rightStick.getRawButton();// TODO:map buttons
+	boolean isLeftElevatorButtonPressed = leftStick.getRawButton(2);// TODO:map buttons
+	boolean isRightElevatorButtonPressed = rightStick.getRawButton(2);// TODO:map buttons
 
 	// intake wheel controlled by right joystick
 	WPI_TalonSRX m_green = properties.getM_green();
@@ -34,13 +34,13 @@ public class IntakeSystem implements RobotController
 	WPI_TalonSRX m_green2 = properties.getM_green2();
 
 	// isOn checks if the motors are currently running
-	if (isLeftElevatorButtonpressed && isRightElevatorButtonpressed)
+	if (isLeftElevatorButtonPressed && isRightElevatorButtonPressed)
 	{
 	    // turns motor on if the buttons are pressed and the motors are off
 	    if (!isOn)
 	    {
-		m_green.set(); // TODO: figure out whether to set positive value or negative value
-		m_green2.set();
+		m_green.set(30); // TODO: figure out whether to set positive value or negative value
+		m_green2.set(30);
 		isOn = true;
 	    }
 	    // turns motor off if the buttons are pressed and the motors are on
