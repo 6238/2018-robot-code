@@ -23,6 +23,7 @@ public class RobotProperties {
     private WPI_TalonSRX m_green2;
     private Solenoid solenoid;
     private Solenoid driveTrainSolenoid;
+
     public RobotProperties() {
         this.timer = new Timer();
         rightStick = new Joystick(0);
@@ -35,13 +36,14 @@ public class RobotProperties {
         WPI_TalonSRX m_frontLeft = new WPI_TalonSRX(34);
         WPI_TalonSRX m_rearLeft = new WPI_TalonSRX(33);
         WPI_TalonSRX m_midLeft = new WPI_TalonSRX(34);
+
         m_green = new WPI_TalonSRX(37);
         m_green2 = new WPI_TalonSRX(38);
         m_left = new SpeedControllerGroup(m_frontLeft, m_rearLeft, m_midLeft);
 
         WPI_TalonSRX m_frontRight = new WPI_TalonSRX(32);
         WPI_TalonSRX m_rearRight = new WPI_TalonSRX(36);
-        WPI_TalonSRX m_midRight =  new WPI_TalonSRX(32);
+        WPI_TalonSRX m_midRight = new WPI_TalonSRX(32);
         m_right = new SpeedControllerGroup(m_frontRight, m_rearRight, m_midRight);
 
         myRobot = new DifferentialDrive(m_left, m_right);
@@ -118,16 +120,19 @@ public class RobotProperties {
     public void setSolenoid(Solenoid solenoid) {
         this.solenoid = solenoid;
     }
-    
+
     public Solenoid getDriveTrainSolenoid() {
-    	return driveTrainSolenoid;
+        return driveTrainSolenoid;
+    }
+
+    public WPI_TalonSRX getM_elevator() {
+        return m_elevator;
     }
 
     public void setDriveTrainSolenoid(Solenoid driveTrainSolenoid) {
         this.solenoid = driveTrainSolenoid;
     }
+}
 
-
-    public WPI_TalonSRX getM_elevator() {return m_elevator;}
 
 
