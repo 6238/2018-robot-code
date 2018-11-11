@@ -23,9 +23,9 @@ public class IntakeSystem implements RobotController
 
     public boolean performAction(RobotProperties properties)
     {
-	//checks if the buttons are pressed
-	boolean isLeftElevatorButtonPressed = leftStick.getRawButton(2);// TODO:map buttons
-	boolean isRightElevatorButtonPressed = rightStick.getRawButton(2);// TODO:map buttons
+	// checks if the buttons are pressed
+	boolean isLeftElevatorIntakeButtonPressed = leftStick.getRawButton(2);// TODO:map buttons
+	boolean isRightElevatorReleaseButtonPressed = rightStick.getRawButton(2);// TODO:map buttons
 
 	// intake wheel controlled by right joystick
 	WPI_TalonSRX m_green = properties.getM_green();
@@ -33,23 +33,45 @@ public class IntakeSystem implements RobotController
 	// intake wheel controlled by left joystick
 	WPI_TalonSRX m_green2 = properties.getM_green2();
 
+	// solenoid for intake system
+	Solenoid solenoid = properties.getSolenoid();
+	boolean isSolenoidTriggerPressed = leftStick.getRawButton(); // TODO:map buttons
+	boolean isSolenoidTriggerOffPressed = leftStick.getRawButton(); // TODO:map buttons
+
 	// isOn checks if the motors are currently running
-	if (isLeftElevatorButtonPressed && isRightElevatorButtonPressed)
+	if (!isOn)
 	{
-	    // turns motor on if the buttons are pressed and the motors are off
-	    if (!isOn)
+	    if (isLeftElevatorIntakeButtonPressed)
 	    {
-		m_green.set(30); // TODO: figure out whether to set positive value or negative value
-		m_green2.set(30);
+		// takes in cube
+		m_green.set(5); // TODO: figure out whether to set positive value or negative value
+		m_green2.set(5);
 		isOn = true;
 	    }
-	    // turns motor off if the buttons are pressed and the motors are on
-	    else
+	    // releases cube
+	    else if (isRightElevatorIntakeButtonPressed)
+	    {
+		m_green.set(-5);
+		m_green2.set(-5);
+		isOn = true;
+	    }
+	}
+	else
+	{
+	    if (isLeftElevatorIntakeButtonPressed||isRightElevatorIntakeButtonPressed)
 	    {
 		m_green.set(0);
 		m_green2.set(0);
 		isOn = false;
 	    }
+	}
+	// triggers solenoid if the on button is pressed and off button is not
+	if (isSolenoidTriggerPressed && !isSolenoidTriggerOffPressed)
+	{
+	    solenoid.set(true);
+	} else if (isSolenoidTriggerOffPressed)
+	{
+	    solenoid.set(false);
 	}
     }
 }

@@ -14,25 +14,21 @@ import edu.wpi.first.wpilibj.Joystick;
 public class ElevatorControl implements RobotController
 {
 
-    private Joystick rightStick, leftStick;
-    private boolean isLeftElevatorButtonpressed;
-    private boolean isRightElevatorButtonPressed;
-
-    public ElevatorControl()
-    {
-	isLeftElevatorButtonpressed = leftStick.getRawButton(4); // Todo: need to find button number
-	isRightElevatorButtonPressed = rightStick.getRawButton(5); // Todo: need to find button number
-    }
-
     @Override
     public boolean performAction(RobotProperties properties)
     {
+	// initializes everthing
+
+	boolean isLeftElevatorButtonPressed = leftStick.getRawButton(4);
+	boolean isRightElevatorButtonPressed = rightStick.getRawButton(4);
+
 	WPI_TalonSRX m_elevator = properties.getM_elevator();
+
 	m_elevator.set(0);
-	if (isRightElevatorButtonPressed && isLeftElevatorButtonpressed)
+	if (isRightElevatorButtonPressed && isLeftElevatorButtonPressed)
 	{
 	    m_elevator.set(0);
-	} else if (isLeftElevatorButtonpressed)
+	} else if (isLeftElevatorButtonPressed)
 	{
 	    m_elevator.set(-10);
 	} else if (isRightElevatorButtonPressed)
@@ -42,6 +38,7 @@ public class ElevatorControl implements RobotController
 	{
 	    m_elevator.set(0);
 	}
+
 	return true;
     }
 }
