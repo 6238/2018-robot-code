@@ -29,14 +29,14 @@ public class IntakeSystem implements RobotController
 	boolean isRightMotorReleaseButtonPressed = rightStick.getRawButton(2);// TODO:map buttons
 
 	// intake wheel controlled by right joystick
-	WPI_TalonSRX m_green = properties.getM_green();
+	WPI_TalonSRX m_green = properties.getM_green(3);
 
 	// intake wheel controlled by left joystick
-	WPI_TalonSRX m_green2 = properties.getM_green2();
+	WPI_TalonSRX m_green2 = properties.getM_green2(3);
 
 	// solenoid for intake system
 	Solenoid solenoid = properties.getSolenoid();
-	boolean isSolenoidTriggerPressed = leftStick.getRawButton(); // TODO:map buttons
+	boolean isSolenoidTriggerPressed = leftStick.getRawButton(3); // TODO:map buttons
 
 	// isOn checks if the motors are currently running
 	if (!isMotorOn)
