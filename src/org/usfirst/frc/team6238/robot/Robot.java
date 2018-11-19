@@ -133,11 +133,7 @@ public class Robot extends IterativeRobot {
 	 * This function is called periodically during operator control.
 	 */
 	@Override
-	/**
-	 * TODO: 
-	 * 1)if stick 1 passes a certain value, then the speed of the green wheels is set to a constant speed
-	 * 2)figure you the range of the values that getY() returns
-	 */
+
 	public void teleopPeriodic() {
 		boolean isLeftTriggerPressed;
 		boolean isRightTriggerPressed;
@@ -159,7 +155,6 @@ public class Robot extends IterativeRobot {
 			{
 				m_green.set(0);
 			}
-			//TODO: what does "tankDrive(0,0);" do
 			//Guess: stops the green wheels from moving
 			
 			myRobot.tankDrive(0, 0);

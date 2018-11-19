@@ -26,8 +26,8 @@ public class ElevatorControl implements RobotController
 
     public ElevatorControl()
     {
-	isLeftElevatorButtonpressed = leftStick.getRawButton(4); // Todo: need to find button number
-	isRightElevatorButtonPressed = rightStick.getRawButton(5); // Todo: need to find button number
+	isLeftElevatorButtonpressed = leftStick.getRawButton(4);
+	isRightElevatorButtonPressed = rightStick.getRawButton(5);
     }
 
     @Override
