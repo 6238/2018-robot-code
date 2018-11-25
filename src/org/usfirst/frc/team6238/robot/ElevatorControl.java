@@ -27,7 +27,7 @@ public class ElevatorControl implements RobotController
 
 	boolean isLeftElevatorButtonPressed = leftStick.getRawButton(4);
 	boolean isRightElevatorButtonPressed = rightStick.getRawButton(4);
-
+	boolean limitswitch = properties.getLimitSwitch();
 	WPI_TalonSRX m_elevator = properties.getM_elevator();
 
 	m_elevator.set(0);
@@ -37,14 +37,13 @@ public class ElevatorControl implements RobotController
 	} else if (isLeftElevatorButtonPressed)
 	{
 	    m_elevator.set(-10);
-	} else if (isRightElevatorButtonPressed)
+	} else if (isRightElevatorButtonPressed && limitswitch.get() != 0)
 	{
 	    m_elevator.set(10);
 	} else
 	{
 	    m_elevator.set(0);
 	}
-
 	return true;
     }
 }
