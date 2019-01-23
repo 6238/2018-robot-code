@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import edu.wpi.first.wpilibj.DigitalInput;
 
 public class RobotProperties {
 
@@ -23,6 +24,9 @@ public class RobotProperties {
     private WPI_TalonSRX m_green2;
     private Solenoid solenoid;
     private Solenoid driveTrainSolenoid;
+    
+    //limit switch for the elevator
+    private DigitalInput limitswitch;
 
     public RobotProperties() {
         this.timer = new Timer();
@@ -32,6 +36,7 @@ public class RobotProperties {
         driveTrainSolenoid = new Solenoid(0);
 
         WPI_TalonSRX m_elevator = new WPI_TalonSRX(35);
+        limitswitch = new DigitalInput(1);
 
         WPI_TalonSRX m_frontLeft = new WPI_TalonSRX(34);
         WPI_TalonSRX m_rearLeft = new WPI_TalonSRX(33);
@@ -49,6 +54,10 @@ public class RobotProperties {
         myRobot = new DifferentialDrive(m_left, m_right);
     }
 
+    public DigitalInput getLimitSwitch()
+    {
+	return limitswitch;
+    }
     public Timer getTimer() {
         return timer;
     }
